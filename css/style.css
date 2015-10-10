@@ -1,9 +1,19 @@
-.navbar{
-	background-color: transparent;
-    background: transparent;
-    border-color: transparent;	
+html,body {height:100%;}
+.special,.special .jumbotron {height:100%;}
+
+nav {
+  background-color: #222;
 }
 
-.navbar li a{
-	color: firebrick;
+#navList {
+  width: 70%;
+}
+
+#navList li a{
+	color: #FFF;
+}
+
+.jumbotron {
+  background: url(../public/img/jumbotron.jpg) center;
+  background-size: cover;
 }
