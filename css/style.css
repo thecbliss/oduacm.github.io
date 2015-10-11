@@ -1,19 +1,62 @@
-html,body {height:100%;}
+html,body {
+  height:100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 .special,.special .jumbotron {height:100%;}
 
 nav {
   background-color: #222;
 }
 
+.navbar {
+  border: 0px;
+}
+
 #navList {
   width: 70%;
+  font-size: 1.25em;
 }
 
 #navList li a{
 	color: #FFF;
+  transition: background-color 800ms;
+}
+
+#navList li a:hover{
+	color: #222;
+  background-color: #5E96C3;
+  font-weight: 700;
 }
 
 .jumbotron {
   background: url(../public/img/jumbotron.jpg) center;
   background-size: cover;
+  color: #FFF;
+}
+
+.jumbotron p {
+  font-size: 3.5em;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  padding-right: 5px;
+  width: 100%;
+  background-color: #5E96C3;
+}
+
+#events ul {
+  width: 30%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#events .tab-content {
+  width: 60%;
+  float: left;
+  padding: 5px;
 }

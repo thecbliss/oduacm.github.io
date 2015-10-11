@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="oduacm">
   <head>
     <title>ODU ACM</title>
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> 
     <link href="public/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     
-    <div id="jumbotron" class="jumbotron special"></div>
+    <div id="jumbotron" class="jumbotron special">
+      <p>ODU Association for Computing Machinery</p>
+    </div>
 
     <div class="container-fluid">
       <nav class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse">
         <ul id="navList" class="nav navbar-nav">
-          <li><a href="#">Glyphicon</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">GLYPHICON</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">EVENTS</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
 
-      <div>
+      <div id="events" ng-controller="EventsController">
+        <uib-tabset vertical="true" type="pills">
+          <uib-tab ng-repeat="event in events">
+            <uib-tab-heading>{{event.title}}</uib-tab-heading>
+            <h2>{{event.title}}</h2>
+            <div>
+              <b>{{event.numAttending}} signed up</b>
+              <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <p>{{event.description}}</p>
+          </uib-tab>
+        </uib-tabset>
+
       </div>
 
     </div>
- 
+
+    <script src="public/vendor/lodash/lodash.min.js"></script>
     <script src="public/vendor/angular/angular.min.js"></script>
     <script src="public/vendor/firebase/firebase.js"></script>
     <script src="public/vendor/angularfire/dist/angularfire.min.js"></script>
     <script src="public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
