@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+
+<!-- Jumbotron Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>  
-  
   
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -50,28 +49,90 @@
     </div>
     
   </div>
-
 </div>
 
 
-
-<!--<div id="jumbotron" class="jumbotron special"></div>-->
-
-
+<!-- Navbar -->
     <div class="container-fluid">
       <nav class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse">
         <ul id="navList" class="nav navbar-nav">
-          <li><a href="#">Glyphicon</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#myCarousel">Glyphicon</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div>
-      </div>
+<!-- News -->
+<div id="news">
+	<div class="row">
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News1
+			</p>
+		</div>
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News2
+			</p>
+		</div>
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News3
+			</p>
+		</div>
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News4
+			</p>
+		</div>
+    
+  </div>
+</div>
 
+<!-- Events -->
+<div id="events">
+  
+</div>
+
+<!-- About -->
+<div id="about">
+    <h1>What is ODU ACM</h1>
+    <p>ACM is the world’s largest educational and scientific computing society uniting the world's computing educators, researchers and professionals to inspire
+       dialogue, share resources and address the field's challenges. ACM strengthens the profession's collective voice through strong leadership, promotion of 
+       the highest standards, and recognition of technical excellence. ACM supports the professional growth of its members by providing opportunities for life-long 
+       learning, career development, and professional networking.</p> 
+</div>
+
+<!-- Contact -->
+		<div id="contact">
+			<br></br>
+        <h1>Contact Us</h1>
+        <form method="POST" action="contact.php">
+          <div class="form-group">
+              <label for="name">Name: </label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+          </div>
+          
+          <div class="form-group">
+              <label for="email">Email: </label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+          </div>
+
+           <div class="form-group">
+              <label for="message">Message: </label>
+              <textarea class="form-control" rows="20" id="message" name="message" placeholder="Enter Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+<!-- Footer -->
+  <hr></hr>
+		<footer>Old Dominion University ACM &copy; 2015</footer>
+	<br></br>
+  
     </div>
  
     <script src="public/vendor/angular/angular.min.js"></script>

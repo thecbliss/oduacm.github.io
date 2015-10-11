@@ -32,7 +32,6 @@ html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
 
-/* faster sliding speed */
 .carousel-inner > .item {
     -webkit-transition: 0.3s ease-in-out left;
     -moz-transition: 0.3s ease-in-out left;
@@ -40,10 +39,40 @@ html,body{height:100%;}
     transition: 0.3s ease-in-out left;
 }
 
-/* keep full widget on smaller screens */
 @media (max-width: 767px) { 
 	body {
 		padding-left: 0;
 		padding-right: 0;
 	}
+}
+
+.cover-card {
+	border: 2px solid white;
+	background: silver;
+	padding: 0px;
+	margin: 0px;
+	height:200px;
+}
+.cover-card > p {
+	text-align: center;
+	background-color: rgba(6,6,6,0.0);
+	color: rgba(6,6,6,0.0);
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+	font-size: 20px;
+}
+.cover-card:hover > p {
+	background-color: rgba(6,6,6,0.3);
+	color: white;
+	text-shadow: 3px 3px 10px #000;
+}
+
+#contact, #about {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+h1{
+	text-align: center;
 }
