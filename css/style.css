@@ -1,5 +1,5 @@
 html,body {height:100%;}
-.special,.special .jumbotron {height:100%;}
+.special,.special .jumbotron .jumbotron2 .jumbotron3 {height:100%;}
 
 nav {
   background-color: #222;
@@ -13,7 +13,37 @@ nav {
 	color: #FFF;
 }
 
-.jumbotron {
+#jumbotron {
   background: url(../public/img/jumbotron.jpg) center;
   background-size: cover;
+}
+
+#jumbotron2 {
+  background: url(../public/img/jumbotron2.jpg) center;
+  background-size: cover;
+}
+
+#jumbotron3 {
+  background: url(../public/img/jumbotron3.jpg) center;
+  background-size: cover;
+}
+
+html,body{height:100%;}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+/* faster sliding speed */
+.carousel-inner > .item {
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
+}
+
+/* keep full widget on smaller screens */
+@media (max-width: 767px) { 
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

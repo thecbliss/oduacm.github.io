@@ -9,7 +9,54 @@
   </head>
   <body>
     
-    <div id="jumbotron" class="jumbotron special"></div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>  
+  
+  
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div id="jumbotron" class="jumbotron special">
+        <div class="container">
+          <div class="carousel-caption">
+          <h1>Welcome to ODU ACM</h1>  
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div id="jumbotron2" class="jumbotron special">
+        <div class="container">
+          <div class="carousel-caption">
+          <h1>Local Hack Day!</h1>  
+          </div>
+        </div>      
+      </div>
+    </div>
+    
+    <div class="item">
+      <div id="jumbotron3" class="jumbotron special">
+        <div class="container">
+          <div class="carousel-caption">
+          <h1>Learning HTML</h1>  
+          </div>
+        </div>     
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+<!--<div id="jumbotron" class="jumbotron special"></div>-->
+
 
     <div class="container-fluid">
       <nav class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse">
@@ -31,5 +78,7 @@
     <script src="public/vendor/firebase/firebase.js"></script>
     <script src="public/vendor/angularfire/dist/angularfire.min.js"></script>
     <script src="public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 </html>
