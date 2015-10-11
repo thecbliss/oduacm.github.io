@@ -4,7 +4,7 @@ html,body {
   font-weight: 300;
 }
 
-.special,.special .jumbotron {height:100%;}
+.special,.special .jumbotron .jumbotron2 .jumbotron3 {height:100%;}
 
 nav {
   background-color: #222;
@@ -30,7 +30,7 @@ nav {
   font-weight: 700;
 }
 
-.jumbotron {
+#jumbotron {
   background: url(../public/img/jumbotron.jpg) center;
   background-size: cover;
   color: #FFF;
@@ -59,4 +59,92 @@ nav {
   width: 60%;
   float: left;
   padding: 5px;
+}
+
+#jumbotron2 {
+  background: url(../public/img/jumbotron2.jpg) center;
+  background-size: cover;
+}
+
+#jumbotron3 {
+  background: url(../public/img/jumbotron3.jpg) center;
+  background-size: cover;
+}
+
+html,body{height:100%;}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+.carousel-inner > .item {
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
+}
+
+@media (max-width: 767px) { 
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.cover-card {
+	border: 2px solid white;
+	background: silver;
+	padding: 0px;
+	margin: 0px;
+	height:200px;
+}
+.cover-card > p {
+	text-align: center;
+	background-color: rgba(6,6,6,0.0);
+	color: rgba(6,6,6,0.0);
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+	font-size: 20px;
+}
+.cover-card:hover > p {
+	background-color: rgba(6,6,6,0.3);
+	color: white;
+	text-shadow: 3px 3px 10px #000;
+}
+
+#contact, #about {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+h1{
+	text-align: center;
+}
+
+h3{
+	font-style: oblique;
+	color: #666666;
+}
+.featurette-divider {
+  margin: 80px 0; 
+}
+.featurette {
+  padding-top: 120px; 
+  overflow: hidden; 
+}
+.featurette-image {
+  margin-top: -120px; 
+}
+
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }

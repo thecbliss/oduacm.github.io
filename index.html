@@ -11,38 +11,184 @@
     
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    
-    <div id="jumbotron" class="jumbotron special">
-      <p>ODU Association for Computing Machinery</p>
-    </div>
+<body>
 
+<!-- Jumbotron Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>  
+  
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div id="jumbotron" class="jumbotron special">
+        <div class="container">
+          <div class="carousel-caption">
+          <h1>Welcome to ODU ACM</h1>  
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="item">
+      <div id="jumbotron2" class="jumbotron special">
+        <div class="container">
+          <div class="carousel-caption">
+          <h1>Local Hack Day!</h1>  
+          </div>
+        </div>      
+      </div>
+    </div>
+    
+    <div class="item">
+      <div id="jumbotron3" class="jumbotron special">
+        <div class="container">
+          <div class="carousel-caption">
+          <h1>Learning HTML</h1>  
+          </div>
+        </div>     
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Navbar -->
     <div class="container-fluid">
       <nav class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse">
         <ul id="navList" class="nav navbar-nav">
-          <li><a href="#">GLYPHICON</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">EVENTS</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="#myCarousel">Glyphicon</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div id="events" ng-controller="EventsController">
-        <uib-tabset vertical="true" type="pills">
-          <uib-tab ng-repeat="event in events">
-            <uib-tab-heading>{{event.title}}</uib-tab-heading>
-            <h2>{{event.title}}</h2>
-            <div>
-              <b>{{event.numAttending}} signed up</b>
-              <button class="btn btn-primary">Sign Up</button>
-            </div>
-            <p>{{event.description}}</p>
-          </uib-tab>
-        </uib-tabset>
+<!-- News -->
+<div id="news">
+	<div class="row">
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News1
+			</p>
+		</div>
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News2
+			</p>
+		</div>
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News3
+			</p>
+		</div>
+		<div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+			<p>
+				News4
+			</p>
+		</div>
+    
+  </div>
+</div>
 
+<!-- Events -->
+<div id="events" ng-controller="EventsController">
+  <uib-tabset vertical="true" type="pills">
+    <uib-tab ng-repeat="event in events">
+      <uib-tab-heading>{{event.title}}</uib-tab-heading>
+      <h2>{{event.title}}</h2>
+      <div>
+        <b>{{event.numAttending}} signed up</b>
+        <button class="btn btn-primary">Sign Up</button>
       </div>
+      <p>{{event.description}}</p>
+    </uib-tab>
+  </uib-tabset>
+</div>
 
+<!-- About -->
+<div id="about">
+    <h1>What is ODU ACM</h1>
+    <p>ACM is the world’s largest educational and scientific computing society uniting the world's computing educators, researchers and professionals to inspire
+       dialogue, share resources and address the field's challenges. ACM strengthens the profession's collective voice through strong leadership, promotion of 
+       the highest standards, and recognition of technical excellence. ACM supports the professional growth of its members by providing opportunities for life-long 
+       learning, career development, and professional networking.</p> 
+       
+    <h1>The Team</h1>   
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img class="img-thumbnail" src="public/img/chris.jpg">
+        <h2>Chris Bliss</h2>
+        <h3>President</h3>
+        <p>I am an innovator and collaborator. I love this field because it offers us the chance to be at the forefront of groundbreaking technologies. 
+           I don't care if my name is in the history books, I just want to change the world for the better.</p>
+      </div>
+    
+      <div class="col-md-4 text-center">
+        <img class="img-thumbnail" src="public/img/joanna.jpg">
+        <h2>Joanna Borba</h2>  
+        <h3>Vice President</h3>
+        <p>I'm just your typical female computer science major trying to find her way through the male dominated field. I am a current sophomore at ODU 
+           who plans to one day work on continuing the progress of technology when it comes to gene mapping. When I am not consumed with school and extracurriculars 
+           I can be found next to a bottle of Mtn Dew with a video game controller in my hand</p>
+      </div> 
+      
+      <div class="col-md-4 text-center">
+        <img class="img-thumbnail" src="public/img/joshua.jpg">
+        <h2>Joshua Harris</h2>  
+        <h3>Secretary</h3>
+        <p>Joshua Harris is a Junior from Virginia Beach who loves web applications. His focus is more on the backend, mostly using Nodejs and php. Over the 
+           summer he had an internship at NASA creating web applications, using Docker/Amazon web services for deployment. He is active in the local developer 
+           community, often attending meetups and events. Github profile @joshuajharris</p>
+      </div>   
+      
+      <div class="col-md-4 text-center">
+        <img class="img-thumbnail" src="public/img/asim.jpg">
+        <h2>Asim Amjad</h2>  
+        <h3>Treasurer</h3>
+      </div> 
+       
+      <div class="col-md-4 text-center">
+        <img class="img-thumbnail" src="public/img/avinash.jpg">
+        <h2>Avinash Gosavi</h2>  
+        <h3>Web Master</h3>
+      </div> 
+            
+    </div>
+    
+</div>
+
+<!-- Contact -->
+		<div id="contact">
+			<br></br>
+        <h1>Contact Us</h1>
+        <form>
+          <div class="form-group">
+              <label for="name">Name: </label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+          </div>
+          
+          <div class="form-group">
+              <label for="email">Email: </label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+          </div>
+
+           <div class="form-group">
+              <label for="message">Message: </label>
+              <textarea class="form-control" rows="20" id="message" name="message" placeholder="Enter Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+<!-- Footer -->
+  <hr></hr>
+		<footer>Old Dominion University ACM &copy; 2015</footer>
+	<br></br>
+  
     </div>
 
     <script src="public/vendor/lodash/lodash.min.js"></script>
