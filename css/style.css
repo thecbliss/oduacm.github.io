@@ -14,9 +14,16 @@ nav {
   border: 0px;
 }
 
-#navList {
+.navbar .nav {
+  margin: 0 auto;
   width: 70%;
   font-size: 1.25em;
+  float: none;
+}
+
+.navbar-brand img {
+  max-width:40px;
+  margin-top: -15px; 
 }
 
 #navList li a{

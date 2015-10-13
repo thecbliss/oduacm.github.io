@@ -56,16 +56,30 @@
 </div>
 
 <!-- Navbar -->
-    <div class="container-fluid">
-      <nav class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse">
-        <ul id="navList" class="nav navbar-nav">
-          <li><a href="#myCarousel">Glyphicon</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<nav class="navbar navbar-inverse navbar-fixed-top collapse navbar-collapse">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#myCarousel">
+      <img alt="Brand" src="public/img/logo.png" onmouseover="brandHover(this);" onmouseout="brandUnhover(this);">
+    </a>
+    <script>
+      function brandHover(element) {
+        element.setAttribute('src', 'public/img/logo-green.png');
+      }
+      function brandUnhover(element) {
+        element.setAttribute('src', 'public/img/logo.png');
+      }
+    </script>
+  </div>
+  <ul id="navList" class="nav navbar-nav">
+    <li><a href="#news">News</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="float: right;padding-top:5px;"><button class="btn btn-primary">Admin Login</button></li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
 
 <!-- News -->
 <div id="news">
