@@ -118,7 +118,7 @@ html,body{height:100%;}
 	text-shadow: 3px 3px 10px #000;
 }
 
-#contact, #about {
+#contact, #events, #about {
 	max-width: 60%;
 	margin: 0 auto;
 }
