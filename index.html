@@ -5,54 +5,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> 
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href="public/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    
+
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
 
 <!-- Jumbotron Carousel -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>  
-  
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div id="jumbotron" class="jumbotron special">
-        <div class="container">
-          <div class="carousel-caption">
-          <h1>Welcome to ODU ACM</h1>  
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="item">
-      <div id="jumbotron2" class="jumbotron special">
-        <div class="container">
-          <div class="carousel-caption">
-          <h1>Local Hack Day!</h1>  
-          </div>
-        </div>      
-      </div>
-    </div>
-    
-    <div class="item">
-      <div id="jumbotron3" class="jumbotron special">
-        <div class="container">
-          <div class="carousel-caption">
-          <h1>Learning HTML</h1>  
-          </div>
-        </div>     
-      </div>
-    </div>
-    
-  </div>
+<div ng-controller="CarouselController">
+  <uib-carousel id="myCarousel" class="carousel slide" interval="myInterval">
+    <uib-slide ng-repeat="slide in slides" active="slide.active" class="jumbotron" id="jumbotron">
+      <img ng-src="{{slide.image}}">
+      <p>{{slide.text}}</p>
+    </uib-slide>
+  </uib-carousel>
 </div>
 
 <!-- Navbar -->
@@ -104,7 +72,7 @@
 				News4
 			</p>
 		</div>
-    
+
   </div>
 </div>
 
@@ -127,54 +95,54 @@
 <div id="about">
     <h1>What is ODU ACM</h1>
     <p>ACM is the world’s largest educational and scientific computing society uniting the world's computing educators, researchers and professionals to inspire
-       dialogue, share resources and address the field's challenges. ACM strengthens the profession's collective voice through strong leadership, promotion of 
-       the highest standards, and recognition of technical excellence. ACM supports the professional growth of its members by providing opportunities for life-long 
-       learning, career development, and professional networking.</p> 
-       
-    <h1>The Team</h1>   
+       dialogue, share resources and address the field's challenges. ACM strengthens the profession's collective voice through strong leadership, promotion of
+       the highest standards, and recognition of technical excellence. ACM supports the professional growth of its members by providing opportunities for life-long
+       learning, career development, and professional networking.</p>
+
+    <h1>The Team</h1>
     <div class="row">
 	<span>
       <div class="col-md-4 text-center">
         <img class="img-thumbnail" src="public/img/chris.jpg">
         <h2>Chris Bliss</h2>
         <h3>President</h3>
-        <p>I am an innovator and collaborator. I love this field because it offers us the chance to be at the forefront of groundbreaking technologies. 
+        <p>I am an innovator and collaborator. I love this field because it offers us the chance to be at the forefront of groundbreaking technologies.
            I don't care if my name is in the history books, I just want to change the world for the better.</p>
       </div>
-    
+
       <div class="col-md-4 text-center">
         <img class="img-thumbnail" src="public/img/joanna.jpg">
-        <h2>Joanna Borba</h2>  
+        <h2>Joanna Borba</h2>
         <h3>Vice President</h3>
-        <p>I'm just your typical female computer science major trying to find her way through the male dominated field. I am a current sophomore at ODU 
-           who plans to one day work on continuing the progress of technology when it comes to gene mapping. When I am not consumed with school and extracurriculars 
+        <p>I'm just your typical female computer science major trying to find her way through the male dominated field. I am a current sophomore at ODU
+           who plans to one day work on continuing the progress of technology when it comes to gene mapping. When I am not consumed with school and extracurriculars
            I can be found next to a bottle of Mtn Dew with a video game controller in my hand</p>
-      </div> 
-      
+      </div>
+
       <div class="col-md-4 text-center">
         <img class="img-thumbnail" src="public/img/joshua.jpg">
-        <h2>Joshua Harris</h2>  
+        <h2>Joshua Harris</h2>
         <h3>Secretary</h3>
-        <p>Joshua Harris is a Junior from Virginia Beach who loves web applications. His focus is more on the backend, mostly using Nodejs and php. Over the 
-           summer he had an internship at NASA creating web applications, using Docker/Amazon web services for deployment. He is active in the local developer 
+        <p>Joshua Harris is a Junior from Virginia Beach who loves web applications. His focus is more on the backend, mostly using Nodejs and php. Over the
+           summer he had an internship at NASA creating web applications, using Docker/Amazon web services for deployment. He is active in the local developer
            community, often attending meetups and events. Github profile @joshuajharris</p>
-      </div>   
+      </div>
     </span>
 	<span>
       <div class="col-md-4 text-center">
         <img class="img-thumbnail" src="public/img/asim.jpg">
-        <h2>Asim Amjad</h2>  
+        <h2>Asim Amjad</h2>
         <h3>Treasurer</h3>
-      </div> 
-       
+      </div>
+
       <div class="col-md-4 text-center">
         <img class="img-thumbnail" src="public/img/avinash.jpg">
-        <h2>Avinash Gosavi</h2>  
+        <h2>Avinash Gosavi</h2>
         <h3>Web Master</h3>
-      </div> 
-    </span>    
+      </div>
+    </span>
     </div>
-    
+
 </div>
 
 <!-- Contact -->
@@ -186,7 +154,7 @@
               <label for="name">Name: </label>
               <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
           </div>
-          
+
           <div class="form-group">
               <label for="email">Email: </label>
               <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
@@ -201,10 +169,10 @@
     </div>
 
 <!-- Footer -->
-  <hr></hr>
+  <hr/>
 		<footer>Old Dominion University ACM &copy; 2015</footer>
 	<br></br>
-  
+
     </div>
 
     <script src="public/vendor/lodash/lodash.min.js"></script>

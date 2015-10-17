@@ -4,8 +4,6 @@ html,body {
   font-weight: 300;
 }
 
-.special,.special .jumbotron .jumbotron2 .jumbotron3 {height:100%;}
-
 nav {
   background-color: #222;
 }
@@ -23,7 +21,7 @@ nav {
 
 .navbar-brand img {
   max-width:40px;
-  margin-top: -15px; 
+  margin-top: -15px;
 }
 
 #navList li a{
@@ -37,10 +35,8 @@ nav {
   font-weight: 700;
 }
 
-#jumbotron {
-  background: url(../public/img/jumbotron.jpg) center;
-  background-size: cover;
-  color: #FFF;
+#jumbotron img {
+  height: 100%;
 }
 
 .jumbotron p {
@@ -53,6 +49,7 @@ nav {
   padding-right: 5px;
   width: 100%;
   background-color: #5E96C3;
+  color: #FFF;
 }
 
 #events ul {
@@ -68,16 +65,6 @@ nav {
   padding: 5px;
 }
 
-#jumbotron2 {
-  background: url(../public/img/jumbotron2.jpg) center;
-  background-size: cover;
-}
-
-#jumbotron3 {
-  background: url(../public/img/jumbotron3.jpg) center;
-  background-size: cover;
-}
-
 html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
@@ -89,7 +76,7 @@ html,body{height:100%;}
     transition: 0.3s ease-in-out left;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 	body {
 		padding-left: 0;
 		padding-right: 0;
@@ -132,14 +119,14 @@ h3{
 	color: #666666;
 }
 .featurette-divider {
-  margin: 80px 0; 
+  margin: 80px 0;
 }
 .featurette {
-  padding-top: 120px; 
-  overflow: hidden; 
+  padding-top: 120px;
+  overflow: hidden;
 }
 .featurette-image {
-  margin-top: -120px; 
+  margin-top: -120px;
 }
 
 .featurette-image.pull-left {
