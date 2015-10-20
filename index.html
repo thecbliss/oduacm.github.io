@@ -149,7 +149,7 @@
 		<div id="contact">
 			<br></br>
         <h1>Contact Us</h1>
-        <form>
+        <form action="http://formspree.io/acm@cs.odu.edu" method="POST">
           <div class="form-group">
               <label for="name">Name: </label>
               <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
@@ -157,14 +157,14 @@
 
           <div class="form-group">
               <label for="email">Email: </label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+              <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter email">
           </div>
 
            <div class="form-group">
               <label for="message">Message: </label>
               <textarea class="form-control" rows="20" id="message" name="message" placeholder="Enter Message"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" value="Send" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
