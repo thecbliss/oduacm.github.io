@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="css/style.css">
   </head>
-<body>
+<body ng-controller="MainController">
 
 <!-- Jumbotron Carousel -->
 <div ng-controller="CarouselController">
@@ -44,7 +44,10 @@
     <li><a href="#projects">Projects</a><li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li style="float: right;padding-top:5px;"><button class="btn btn-primary">Admin Login</button></li>
+    <li style="float: right;padding-top:5px;">
+      <button ng-if="!authData.google" class="btn btn-primary" ng-click="login('google')">Login</button>
+      <button ng-if="authData.google" class="btn btn-primary" ng-click="logout()">Logout</button>
+    </li>
   </ul>
 </nav>
 
@@ -87,7 +90,7 @@
         <b>{{event.numAttending}} geek(s) signed up</b><br/>
       </div>
       <p>{{event.description}}</p>
-      <button class="btn btn-primary">Sign Up</button>
+      <button class="btn btn-primary" ng-click="joinEvent(event.$id)">Sign Up</button>
     </uib-tab>
   </uib-tabset>
 </div>
@@ -176,10 +179,16 @@
     </div>
 
     <script src="public/vendor/lodash/lodash.min.js"></script>
+
     <script src="public/vendor/angular/angular.min.js"></script>
+    <script src="public/vendor/angular-animate/angular-animate.min.js"></script>
+
     <script src="public/vendor/firebase/firebase.js"></script>
     <script src="public/vendor/angularfire/dist/angularfire.min.js"></script>
+
     <script src="public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    </script>
 
     <script src="js/app.js"></script>
   </body>
