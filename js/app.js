@@ -8,7 +8,7 @@ app.factory('Auth', function($firebaseAuth) {
 
 app.controller("MainController", function($scope, Auth, $firebaseArray){
   $scope.login = function(authMethod) {
-    Auth.$authWithOAuthRedirect(authMethod).then(function(authData) {
+    Auth.$authWithOAuthRedirect(authMethod, {scope:"email"}).then(function(authData) {
     }).catch(function(error) {
       if (error.code === 'TRANSPORT_UNAVAILABLE') {
         Auth.$authWithOAuthPopup(authMethod).then(function(authData) {
@@ -59,11 +59,34 @@ app.controller("EventsController", function($scope, $firebaseArray) {
   $scope.events.$loaded().then(function(events) {
 
     $scope.joinEvent = function(id) {
-      var currEvent = angular.copy(events.$getRecord(id));
+      var currEvent = events.$getRecord(id);
       var attendees = getAttendees(currEvent.attendeesStr);
-      if(_.indexOf(attendees, "jharr173@odu.edu") !== -1) {
+      if(_.indexOf(attendees, $scope.authData.google.email) !== -1) {
         console.log("you've already joined");
+      } else {
+        attendees.push($scope.authData.google.email);
+        delete currEvent.attendees;
+        currEvent.attendeesStr = attendees.join();
+        $scope.events.$save(currEvent).then(function(ref) {
+          console.log("$scope.events is now " + $scope.events);
+        });
+        console.log("You have joined the event");
       }
+    }
+
+    $scope.leaveEvent = function(id){
+        var currEvent = events.$getRecord(id);
+        var attendees = getAttendees(currEvent.attendeesStr);
+        var index = _.indexOf(attendees, $scope.authData.google.email);
+        if(index !== -1) {
+          attendees.splice(index, 1);
+          currEvent.attendeesStr = attendees.join();
+          delete currEvent.attendees;
+          $scope.events.$save(currEvent).then(function(ref) {
+            console.log("$scope.events is now " + $scope.events);
+          });
+          console.log("You have left the event");
+        }
     }
 
     function getAttendees(commaAttendees){
